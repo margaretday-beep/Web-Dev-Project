@@ -1,0 +1,250 @@
+/*body fonts*/
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+/*section for spacing*/
+.section {
+    margin: 40px 0;
+
+}
+
+/*container for all content*/
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/*headings*/
+h1,h2, h3 {
+    color: #2F6F6D;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* logo design */
+#logo {
+    display: block;
+    margin: 20px auto;
+    width: 150px;
+    background-size: cover;
+}
+
+/* background*/
+body {
+    background-color:#FAF7F2;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*title*/
+h1 {
+    color:#2F6F6D;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*navigation*/
+#main-nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#main-nav a{
+    color: #2F6F6D;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+}
+
+
+/*paragraph styling*/
+p{
+    background-color: #E0E0E0;
+    padding: 20px;
+    border-radius: 10px;
+    color: #6B7280;
+    text-align: center;
+    line-height: 1.7;
+   
+}
+    
+
+/*two column layout*/
+#two-columns {
+    display: grid;
+    grid-template-columns: 1fr; /*mobile one coulmn*/
+    gap: 20px;
+    padding: 40px 20px;
+}
+@media (min-width: 500px) {
+    #two-columns {
+        grid-template-columns: 1fr 1fr; /*desktop two columns*/
+    }
+}
+
+/*columns*/
+#left-column, #right-column {
+    background-color: #E0E0E0;
+    padding: 20px;
+    border-radius: 8px;
+}
+/*headings inside columns*/
+#issues-heading,
+#tax-heading,h4 {
+    color:#2F6F6D;
+    margin-bottom: 10px;
+}
+
+#tax-info {
+    display: none;
+}
+
+/*issues list*/
+#list1{
+    color: #6B7280;
+}
+/*tax button*/
+#tax-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #2F6F6D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#tax-button:hover {
+    background-color: #1F4F4D;
+    transform: scale(1.05);
+}
+/*IRS link*/
+#free-irs-link {
+    color: #2F6F6D;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+#free-irs-link:hover {
+    color: #2F6F6D;
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+
+
+/*intro video text*/
+#intro-video-text {
+    color: #2F6F6D;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/*intro video*/
+#intro-video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*contact heading*/
+#contact-heading {
+    color: #2F6F6D;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+/*form*/
+form {
+    background-color: #E0E0E0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*topics intro*/
+#topics-intro {
+    color: #6B7280;
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+/*calculator intro*/
+#calculator-intro {
+    color: #6B7280;
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+/*calculator section*/
+#calculator-section {
+    background-color: #E0E0E0;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+/*calculator section labels*/
+#calculator-section label {
+    color: #2F6F6D;
+    font-weight: bold;
+}
+
+/*calculator section inputs*/
+#calculator-section input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/*calcutor section animantion*/
+.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+.shown {
+    opacity: 1;
+    color: #2F6F6D;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*budget tool container*/
+.tool-container {
+    max-width: 80%;
+    margin: 0px auto;
+    padding: 20px;
+}
+
+/*budget tool root*/
+#root{
+    width: 100%;
+    max-width: 1126px;
+}
+/*budget card*/
+.budget-card {
+    max-width: 600px;
+    width: 100%;
+    font-family: var(--sans)
+}
+
+/*budget card headings*/
+.budget-card h2,
+.budget-card h3 {
+    font-family: var(--sans);
+}
