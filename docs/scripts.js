@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const goalInput = document.getElementById("goal");
     const monthlyInput = document.getElementById("monthly");
     const result = document.getElementById("calc-result");
+    const formMessage = document.getElementById("form-message");
 
     if (form) {
         form.addEventListener("submit", (event) => {
@@ -14,11 +15,17 @@ document.addEventListener("DOMContentLoaded", () => {
             const email = document.getElementById("email").value.trim();
 
             if (!name || !email) {
-                alert("Please fill out both fields.");
+                if (formMessage) {
+                    formMessage.textContent = "Please fill out both fields.";
+                    formMessage.className = "status-message error-message";
+                }
                 return;
             }
 
-            alert("Thank you for signing up, " + name + "! We will keep you updated at " + email + ".");
+            if (formMessage) {
+                formMessage.textContent = "Thank you for signing up, " + name + "! We will keep you updated at " + email + ".";
+                formMessage.className = "status-message success-message";
+            }
         });
     }
 
@@ -28,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             taxInfo.style.display = isHidden ? "block" : "none";
             taxButton.textContent = isHidden ? "Hide tax resources" : "Click here for tax resources!";
+            taxButton.setAttribute("aria-expanded", String(isHidden));
         });
     }
 

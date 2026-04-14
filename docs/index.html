@@ -49,7 +49,7 @@
                     <h3>Tax season is here</h3>
                 </div>
 
-                <button id="tax-button" type="button">Click here for tax resources!</button>
+                <button id="tax-button" type="button" aria-expanded="false" aria-controls="tax-info">Click here for tax resources!</button>
 
                 <div id="tax-info">
                     <h4>Here are some online filing resources:</h4>
@@ -70,6 +70,7 @@
             src="https://www.youtube.com/embed/pkSxhxTV6p4?si=BtrwaTF93AJl9Kzs"
             title="YouTube video player"
             frameborder="0"
+            loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
@@ -88,6 +89,7 @@
                 <input type="email" id="email" name="email">
 
                 <input type="submit" value="Submit">
+                <p id="form-message" class="status-message" aria-live="polite"></p>
             </form>
         </section>
 
