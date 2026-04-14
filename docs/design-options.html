@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chic Cashflows - Design Options</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Nunito:wght@500;700;800&family=Space+Grotesk:wght@500;700&display=swap");
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            background: #f3efe9;
+            color: #1f2937;
+        }
+
+        .page {
+            width: min(1200px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 32px 0 56px;
+        }
+
+        .intro {
+            margin-bottom: 28px;
+            padding: 28px;
+            border-radius: 24px;
+            background: #fffaf5;
+            box-shadow: 0 18px 40px rgba(77, 59, 39, 0.08);
+        }
+
+        .intro h1 {
+            margin: 0 0 12px;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            line-height: 1;
+        }
+
+        .intro p {
+            margin: 0;
+            max-width: 60ch;
+            color: #5b6473;
+            line-height: 1.7;
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .option {
+            border-radius: 28px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 20px 48px rgba(40, 28, 18, 0.1);
+        }
+
+        .option-copy {
+            padding: 20px 22px 24px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .option-copy h2 {
+            margin: 0 0 10px;
+            font-size: 1.35rem;
+        }
+
+        .option-copy p {
+            margin: 0 0 16px;
+            color: #5a6472;
+            line-height: 1.6;
+        }
+
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .pill {
+            padding: 7px 12px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .mockup {
+            aspect-ratio: 9 / 13;
+            padding: 18px;
+            display: grid;
+            gap: 14px;
+        }
+
+        .screen {
+            border-radius: 22px;
+            min-height: 100%;
+            padding: 18px;
+            display: grid;
+            gap: 14px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-size: 0.76rem;
+            font-weight: 700;
+        }
+
+        .hero {
+            padding: 16px;
+            border-radius: 20px;
+        }
+
+        .hero h3 {
+            margin: 0 0 10px;
+        }
+
+        .hero p {
+            margin: 0;
+            font-size: 0.92rem;
+            line-height: 1.55;
+        }
+
+        .grid-two {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .card {
+            min-height: 120px;
+            padding: 14px;
+            border-radius: 18px;
+        }
+
+        .card h4 {
+            margin: 0 0 8px;
+            font-size: 0.95rem;
+        }
+
+        .card p,
+        .card ul {
+            margin: 0;
+            font-size: 0.82rem;
+            line-height: 1.55;
+        }
+
+        .card ul {
+            padding-left: 18px;
+        }
+
+        .tool-box {
+            padding: 14px;
+            border-radius: 20px;
+        }
+
+        .tool-box h4 {
+            margin: 0 0 10px;
+        }
+
+        .field {
+            height: 34px;
+            border-radius: 12px;
+            margin-bottom: 8px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 9px 14px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 800;
+        }
+
+        .mini-chart {
+            display: grid;
+            grid-template-columns: 74px 1fr;
+            gap: 12px;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .pie {
+            width: 74px;
+            height: 74px;
+            border-radius: 50%;
+        }
+
+        .legend {
+            display: grid;
+            gap: 6px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .swatch {
+            width: 10px;
+            height: 10px;
+            border-radius: 999px;
+        }
+
+        .soft-modern {
+            background: linear-gradient(180deg, #f8f2eb, #f1ece4);
+        }
+
+        .soft-modern .screen {
+            background: rgba(255, 252, 247, 0.94);
+            color: #2c3340;
+            font-family: "Inter", sans-serif;
+        }
+
+        .soft-modern .logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #eed6cb, #d8e5dc);
+        }
+
+        .soft-modern .brand {
+            font-family: "Fraunces", serif;
+            font-size: 0.95rem;
+            color: #1d5a5b;
+        }
+
+        .soft-modern .nav-link,
+        .soft-modern .pill {
+            background: #efe5dc;
+            color: #805550;
+        }
+
+        .soft-modern .hero {
+            background: linear-gradient(135deg, #fff8f2, #ebf4ef);
+        }
+
+        .soft-modern .hero h3 {
+            font-family: "Fraunces", serif;
+            font-size: 1.6rem;
+            color: #1e5f61;
+        }
+
+        .soft-modern .card,
+        .soft-modern .tool-box {
+            background: #fffaf5;
+            border: 1px solid #e8ddd2;
+        }
+
+        .soft-modern .field {
+            background: #f1ebe5;
+        }
+
+        .soft-modern .button {
+            background: #2f6f6d;
+            color: #fff;
+        }
+
+        .soft-modern .pie {
+            background: conic-gradient(#2f6f6d 0 36%, #e9927b 36% 61%, #c7d4c6 61% 82%, #ead9c8 82% 100%);
+        }
+
+        .soft-modern .swatch.one { background: #2f6f6d; }
+        .soft-modern .swatch.two { background: #e9927b; }
+        .soft-modern .swatch.three { background: #c7d4c6; }
+        .soft-modern .swatch.four { background: #ead9c8; }
+
+        .playful {
+            background: linear-gradient(180deg, #fff3e4, #ffe2d6);
+        }
+
+        .playful .screen {
+            background: #fffaf6;
+            color: #42253d;
+            font-family: "Nunito", sans-serif;
+        }
+
+        .playful .logo {
+            width: 46px;
+            height: 46px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #ff8fab, #ffd166);
+        }
+
+        .playful .brand {
+            font-size: 1rem;
+            font-weight: 800;
+            color: #c2410c;
+        }
+
+        .playful .nav-link,
+        .playful .pill {
+            background: #ffe0e8;
+            color: #c53c6c;
+        }
+
+        .playful .hero {
+            background: linear-gradient(135deg, #fff2c9, #ffd5df);
+        }
+
+        .playful .hero h3 {
+            font-size: 1.55rem;
+            color: #b45309;
+        }
+
+        .playful .card,
+        .playful .tool-box {
+            background: #fff;
+            border: 2px dashed #f7b6c2;
+        }
+
+        .playful .field {
+            background: #fff2f5;
+        }
+
+        .playful .button {
+            background: linear-gradient(135deg, #ff5d73, #ff8f5a);
+            color: #fff;
+        }
+
+        .playful .pie {
+            background: conic-gradient(#ff5d73 0 32%, #ffb703 32% 54%, #57cc99 54% 78%, #6ec5ff 78% 100%);
+        }
+
+        .playful .swatch.one { background: #ff5d73; }
+        .playful .swatch.two { background: #ffb703; }
+        .playful .swatch.three { background: #57cc99; }
+        .playful .swatch.four { background: #6ec5ff; }
+
+        .dashboard {
+            background: linear-gradient(180deg, #eaf1f8, #dfe7f0);
+        }
+
+        .dashboard .screen {
+            background: #f9fbfd;
+            color: #1c2636;
+            font-family: "Inter", sans-serif;
+        }
+
+        .dashboard .logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #24476d, #7aa6d8);
+        }
+
+        .dashboard .brand {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.95rem;
+            color: #153b68;
+        }
+
+        .dashboard .nav-link,
+        .dashboard .pill {
+            background: #dde9f5;
+            color: #315d8a;
+        }
+
+        .dashboard .hero {
+            background: linear-gradient(135deg, #eef5ff, #dde8f3);
+        }
+
+        .dashboard .hero h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.55rem;
+            color: #123e6c;
+        }
+
+        .dashboard .card,
+        .dashboard .tool-box {
+            background: #ffffff;
+            border: 1px solid #d4e0ee;
+        }
+
+        .dashboard .field {
+            background: #edf3f9;
+        }
+
+        .dashboard .button {
+            background: #214e7a;
+            color: #fff;
+        }
+
+        .dashboard .pie {
+            background: conic-gradient(#214e7a 0 34%, #4f88c6 34% 58%, #93b9db 58% 79%, #d4e0ee 79% 100%);
+        }
+
+        .dashboard .swatch.one { background: #214e7a; }
+        .dashboard .swatch.two { background: #4f88c6; }
+        .dashboard .swatch.three { background: #93b9db; }
+        .dashboard .swatch.four { background: #d4e0ee; }
+
+        @media (max-width: 1000px) {
+            .options {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <section class="intro">
+            <h1>Design Directions for Chic Cashflows</h1>
+            <p>
+                These are three visual directions for the site: one polished and editorial, one brighter and more playful,
+                and one more structured like a finance dashboard. Open this page in your browser and choose the one that
+                feels right for your class project and target audience.
+            </p>
+        </section>
+
+        <section class="options">
+            <article class="option">
+                <div class="mockup soft-modern">
+                    <div class="screen">
+                        <div class="nav">
+                            <div style="display:flex; align-items:center; gap:10px;">
+                                <div class="logo"></div>
+                                <div class="brand">Chic Cashflows</div>
+                            </div>
+                            <div class="nav-links">
+                                <span class="nav-link">Home</span>
+                                <span class="nav-link">Topics</span>
+                                <span class="nav-link">Tools</span>
+                            </div>
+                        </div>
+                        <section class="hero">
+                            <h3>Soft Modern Editorial</h3>
+                            <p>A calmer, more polished homepage with elegant type, balanced spacing, and clean content cards.</p>
+                        </section>
+                        <div class="grid-two">
+                            <section class="card">
+                                <h4>Key Topics</h4>
+                                <ul>
+                                    <li>Budgeting basics</li>
+                                    <li>Emergency savings</li>
+                                    <li>Credit confidence</li>
+                                </ul>
+                            </section>
+                            <section class="card">
+                                <h4>Visual feel</h4>
+                                <p>Magazine-like structure with warm neutral tones and refined cards.</p>
+                            </section>
+                        </div>
+                        <section class="tool-box">
+                            <h4>Budget Tool Preview</h4>
+                            <div class="field"></div>
+                            <div class="field"></div>
+                            <span class="button">Calculate</span>
+                            <div class="mini-chart">
+                                <div class="pie"></div>
+                                <div class="legend">
+                                    <div class="legend-item"><span class="swatch one"></span> Rent</div>
+                                    <div class="legend-item"><span class="swatch two"></span> Groceries</div>
+                                    <div class="legend-item"><span class="swatch three"></span> Transport</div>
+                                    <div class="legend-item"><span class="swatch four"></span> Savings</div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="option-copy">
+                    <h2>Option 1: Soft Modern Editorial</h2>
+                    <p>Best if you want the project to look polished, mature, and still warm for a young-women audience.</p>
+                    <div class="pill-row">
+                        <span class="pill">Cream + teal</span>
+                        <span class="pill">Serif headings</span>
+                        <span class="pill">Clean cards</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="option">
+                <div class="mockup playful">
+                    <div class="screen">
+                        <div class="nav">
+                            <div style="display:flex; align-items:center; gap:10px;">
+                                <div class="logo"></div>
+                                <div class="brand">Chic Cashflows</div>
+                            </div>
+                            <div class="nav-links">
+                                <span class="nav-link">Home</span>
+                                <span class="nav-link">Topics</span>
+                                <span class="nav-link">Tools</span>
+                            </div>
+                        </div>
+                        <section class="hero">
+                            <h3>Bright Playful Finance</h3>
+                            <p>A more energetic direction with rounded shapes, friendlier colors, and a younger social-media-adjacent tone.</p>
+                        </section>
+                        <div class="grid-two">
+                            <section class="card">
+                                <h4>Homepage energy</h4>
+                                <p>More emphasis on calls to action, featured tools, and fun section breaks.</p>
+                            </section>
+                            <section class="card">
+                                <h4>Audience fit</h4>
+                                <p>Feels approachable and upbeat without looking childish.</p>
+                            </section>
+                        </div>
+                        <section class="tool-box">
+                            <h4>Budget Tool Preview</h4>
+                            <div class="field"></div>
+                            <div class="field"></div>
+                            <span class="button">Calculate</span>
+                            <div class="mini-chart">
+                                <div class="pie"></div>
+                                <div class="legend">
+                                    <div class="legend-item"><span class="swatch one"></span> Rent</div>
+                                    <div class="legend-item"><span class="swatch two"></span> Groceries</div>
+                                    <div class="legend-item"><span class="swatch three"></span> Transport</div>
+                                    <div class="legend-item"><span class="swatch four"></span> Savings</div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="option-copy">
+                    <h2>Option 2: Bright Playful Finance</h2>
+                    <p>Best if you want the site to feel youthful, friendly, and noticeably more lively than a typical class project.</p>
+                    <div class="pill-row">
+                        <span class="pill">Peach + blush</span>
+                        <span class="pill">Rounded UI</span>
+                        <span class="pill">High energy</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="option">
+                <div class="mockup dashboard">
+                    <div class="screen">
+                        <div class="nav">
+                            <div style="display:flex; align-items:center; gap:10px;">
+                                <div class="logo"></div>
+                                <div class="brand">Chic Cashflows</div>
+                            </div>
+                            <div class="nav-links">
+                                <span class="nav-link">Home</span>
+                                <span class="nav-link">Topics</span>
+                                <span class="nav-link">Tools</span>
+                            </div>
+                        </div>
+                        <section class="hero">
+                            <h3>Clean Financial Dashboard</h3>
+                            <p>A more structured and tool-first design that feels clear, useful, and trustworthy.</p>
+                        </section>
+                        <div class="grid-two">
+                            <section class="card">
+                                <h4>Strength</h4>
+                                <p>Very readable, easy to navigate, and especially good for calculators and tables.</p>
+                            </section>
+                            <section class="card">
+                                <h4>Layout style</h4>
+                                <p>More grid-based, with stronger sections for tools and financial resources.</p>
+                            </section>
+                        </div>
+                        <section class="tool-box">
+                            <h4>Budget Tool Preview</h4>
+                            <div class="field"></div>
+                            <div class="field"></div>
+                            <span class="button">Calculate</span>
+                            <div class="mini-chart">
+                                <div class="pie"></div>
+                                <div class="legend">
+                                    <div class="legend-item"><span class="swatch one"></span> Rent</div>
+                                    <div class="legend-item"><span class="swatch two"></span> Groceries</div>
+                                    <div class="legend-item"><span class="swatch three"></span> Transport</div>
+                                    <div class="legend-item"><span class="swatch four"></span> Savings</div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="option-copy">
+                    <h2>Option 3: Clean Financial Dashboard</h2>
+                    <p>Best if you want the strongest usability and a more serious finance identity without losing visual polish.</p>
+                    <div class="pill-row">
+                        <span class="pill">Blue + slate</span>
+                        <span class="pill">Tool-focused</span>
+                        <span class="pill">High clarity</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+</body>
+</html>

@@ -2,43 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
-    <title>Chic Cashflows - Savings Tool</title>
-    <link rel="icon" type="image/png" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>Chic Cashflows - Savings Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
-
 <body>
-<div class="container">
-    <img id="logo" src="assets/CHic Cashflows.jpg" alt="Chic Cashflows logo with elegant script text Chic Cashflows, surrounded by soft pastel colors and gentle curves, creating a friendly and welcoming financial atmosphere">
-    <h1> Savings Tool </h1>
-    <nav id="main-nav">
-            <a href="index.html">Home</a>
-            <a href="topics.html">Topics</a>
-            <a href="savings-tool.html">Savings Tool</a>
-            <a href="BudgetTool.html">Budget Tool</a>
-    </nav>    
+    <div class="container">
+        <section class="hero-panel">
+            <div class="hero-grid">
+                <div>
+                    <div class="brand-row">
+                        <img id="logo" src="assets/CHic Cashflows.jpg" alt="Chic Cashflows logo with elegant script text Chic Cashflows, surrounded by soft pastel colors and gentle curves, creating a friendly and welcoming financial atmosphere">
+                        <div>
+                            <p class="eyebrow">Savings Planner</p>
+                            <h1>Savings Tool</h1>
+                        </div>
+                    </div>
+                    <p id="calculator-intro">
+                        This tool helps you estimate how long it will take to reach a savings goal.
+                        Enter the amount you want to save and how much you can put away each month.
+                    </p>
+                    <nav id="main-nav">
+                        <a href="index.html">Home</a>
+                        <a href="topics.html">Topics</a>
+                        <a href="savings-tool.html">Savings Tool</a>
+                        <a href="BudgetTool.html">Budget Tool</a>
+                    </nav>
+                </div>
+                <aside class="section-card">
+                    <h3>Good uses for this tool</h3>
+                    <div class="quick-links">
+                        <div class="quick-link">
+                            <strong>Emergency fund planning</strong>
+                            <span>See how long it will take to build a starter safety net.</span>
+                        </div>
+                        <div class="quick-link">
+                            <strong>Short-term goals</strong>
+                            <span>Estimate timelines for travel, school costs, or a new purchase.</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
 
-    <p id="calculator-intro" class="section">
-    This tool will help you calculate how long to reach your savings goal. 
-    To start, enter how much you want to save and how much you can contribute each month. 
-    the calculator will automatically update and show you timeline in real time. 
-    </p>
+        <section id="calculator-section" class="section">
+            <h2>Calculate your savings timeline</h2>
 
-    <section id="calculator-section" class="section">
-     <h2> Calculate Your Savings Timeline </h2>
+            <label for="goal">Savings goal ($)</label>
+            <input type="number" id="goal" placeholder="Enter your savings goal">
 
-        <label for="goal">Savings goal ($): </label>
-        <input type="number" id="goal" placeholder="Enter your savings goal">
+            <label for="monthly">Monthly contribution ($)</label>
+            <input type="number" id="monthly" name="monthly" placeholder="Enter your monthly contribution">
 
-        <label for="monthly">Monthly contribution ($): </label>
-        <input type="number" id="monthly" name="monthly" placeholder="Enter your monthly contribution">
+            <p id="calc-result">Please enter valid numbers for both fields.</p>
+        </section>
 
-        <p id="calc-result"></p>
-    </section>
-
-
-<script src="scripts.js"></script>
-</div>
+        <script src="scripts.js"></script>
+    </div>
 </body>
+</html>
