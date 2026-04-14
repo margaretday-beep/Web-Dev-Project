@@ -1,7 +1,6 @@
 :root {
     --background: #f8f4ef;
     --surface: #ffffff;
-    --surface-alt: #ede6dd;
     --text: #4f4f63;
     --heading: #2f6f6d;
     --accent: #d98a6a;
@@ -371,18 +370,6 @@ th {
     max-width: 320px;
     height: auto !important;
     margin: 12px auto 0;
-}
-
-.hidden {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.shown {
-    opacity: 1;
-    color: var(--heading);
-    font-weight: bold;
-    text-align: center;
 }
 
 @media (min-width: 700px) {

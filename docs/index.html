@@ -1,84 +1,97 @@
 <!--Name: Maggie Day -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <title>Chic Cashflows</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>Chic Cashflows</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
-
 <body>
-    <div class="container">  
+    <div class="container">
         <img id="logo" src="assets/CHic Cashflows.jpg" alt="Chic Cashflows logo with elegant script text Chic Cashflows, surrounded by soft pastel colors and gentle curves, creating a friendly and welcoming financial atmosphere">
-          <nav id ="main-nav">
+
+        <nav id="main-nav">
             <a id="nav-home" href="index.html">Home</a>
             <a id="nav-topics" href="topics.html">Topics</a>
             <a id="nav-savings" href="savings-tool.html">Savings Tool</a>
             <a id="nav-budget" href="BudgetTool.html">Budget Tool</a>
-            </nav> 
-    <h1 id="welcome-heading" class="section">Welcome to Chic Cashflows!</h1>
-    <p id="intro-text" class="section"> 
-      This website is here to guide young women (you!)  
-      through the financial struggles that face us in the 21st century. 
-     Whether you need assistance with budgeting, taxes, investing, or choosing the best credit card for your situation, Chic Cashflows is here to help.
-    </p>
+        </nav>
 
-    <hr>
-    <section id="two-columns"class="section">
-     <aside id="left-column">
-            <div id="issues-heading">
-              <h3> Women face many issues in personal finance today, including:</h3>
-            </div>
+        <h1 id="welcome-heading" class="section">Welcome to Chic Cashflows!</h1>
 
-            <div id="list1">
-             <ul>
-                    <li> Gender pay gap </li>
-                    <li> Less confidence and delayed retirement planning </li>
-                    <li> Lower levels of investing (when compared to men) </li>
-            </ul>
-            </div>
-        </aside>
-    
-         <div id="right-column">
-             <div id="tax-heading">
-                 <h3> Tax season is here </h3>
-                </div>  
-                <button id="tax-button">Click here for tax resources!</button>
+        <p id="intro-text" class="section">
+            This website is here to guide young women (you!)
+            through the financial struggles that face us in the 21st century.
+            Whether you need assistance with budgeting, taxes, investing, or choosing the best credit card for your situation, Chic Cashflows is here to help.
+        </p>
+
+        <hr>
+
+        <section id="two-columns" class="section">
+            <aside id="left-column">
+                <div id="issues-heading">
+                    <h3>Women face many issues in personal finance today, including:</h3>
+                </div>
+
+                <div id="list1">
+                    <ul>
+                        <li>Gender pay gap</li>
+                        <li>Less confidence and delayed retirement planning</li>
+                        <li>Lower levels of investing (when compared to men)</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <div id="right-column">
+                <div id="tax-heading">
+                    <h3>Tax season is here</h3>
+                </div>
+
+                <button id="tax-button" type="button">Click here for tax resources!</button>
+
                 <div id="tax-info">
-                 <h4>Here are some online filing resources:</h4>
-             
-                 <a id="free-irs-link" href="https://apps.irs.gov/app/freeFile/browse-all-offers/">Free IRS filing resources!</a>
-                 <p>Keep important tax forms like W-2s and 1099s in one safe place.</p>
-                 <p>Check tax deadlines early so you are not rushing at the last minute.</p>
-                 <p>Students may qualify for education-related tax credits.</p>      
-        </div>   
-    </section>    
-    <hr>
+                    <h4>Here are some online filing resources:</h4>
+                    <a id="free-irs-link" href="https://apps.irs.gov/app/freeFile/browse-all-offers/">Free IRS filing resources!</a>
+                    <p>Keep important tax forms like W-2s and 1099s in one safe place.</p>
+                    <p>Check tax deadlines early so you are not rushing at the last minute.</p>
+                    <p>Students may qualify for education-related tax credits.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
         <h3 id="intro-video-text" class="section">Now you may be wondering, what even is personal finance? Here is a video that gives a brief overview.</h3>
-            <iframe id="intro-video" width="560" height="315" 
-            src="https://www.youtube.com/embed/pkSxhxTV6p4?si=BtrwaTF93AJl9Kzs" 
-            title="YouTube video player" 
-             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-             referrerpolicy="strict-origin-when-cross-origin" 
-             allowfullscreen></iframe>
 
-    <section id="contact-section" class="section">
-        <h2 id ="contact-heading">
-            Let’s keep in touch! Fill out your contact info below to receive updates on new content and resources.
-        </h2>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <input type="submit" value="Submit">
-        </form>
-    </section>
+        <iframe
+            id="intro-video"
+            src="https://www.youtube.com/embed/pkSxhxTV6p4?si=BtrwaTF93AJl9Kzs"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+        ></iframe>
 
-<script src="scripts.js"></script>
-</div>  
+        <section id="contact-section" class="section">
+            <h2 id="contact-heading">
+                Let’s keep in touch! Fill out your contact info below to receive updates on new content and resources.
+            </h2>
+
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <script src="scripts.js"></script>
+    </div>
 </body>
 </html>
-   
