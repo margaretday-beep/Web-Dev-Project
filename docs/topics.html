@@ -1,63 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Chic Cashflows - Topics</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="favicon.png">
-</head>
-<body>
-    <div class="container">
-        <section class="hero-panel">
-            <div class="brand-row">
-                <img id="logo" src="assets/CHic Cashflows.jpg" alt="Chic Cashflows logo with elegant script text Chic Cashflows, surrounded by soft pastel colors and gentle curves, creating a friendly and welcoming financial atmosphere">
-                <div>
-                    <p class="eyebrow">Article Archive</p>
-                    <h1 id="topics-heading">Topics</h1>
-                </div>
-            </div>
-            <p id="topics-intro">
-                Browse the current topic archive for Chic Cashflows. These articles focus on practical money issues that affect young women,
-                from building an emergency fund to using credit more confidently.
-            </p>
-            <nav id="main-nav">
-                <a id="nav-home" href="index.html">Home</a>
-                <a id="nav-topics" href="topics.html">Topics</a>
-                <a id="nav-savings" href="savings-tool.html">Savings Tool</a>
-                <a id="nav-budget" href="BudgetTool.html">Budget Tool</a>
-            </nav>
-        </section>
+    <link rel="stylesheet" href="styles.css">  
+    <link rel="icon" type="image/png" href="favicon.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
 
-        <section class="topics-table-wrap section">
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Article</th>
-                        <th>Topic / Topics</th>
-                        <th>Date</th>
-                        <th>Link</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Emergency Funds</td>
-                        <td>Emergency Planning, Budgeting, Saving</td>
-                        <td>2026-02-07</td>
-                        <td><a href="emergency-funds.html">Read More</a></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Credit Cards</td>
-                        <td>Credit, Debt Management</td>
-                        <td>2026-02-14</td>
-                        <td><a href="credit-cards.html">Read More</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </div>
+    <style>
+        table, th, td {
+            border: 1px #6F5748 solid;
+            border-collapse: collapse;
+            color: #1F2937;
+        }
+
+        .container {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        table {
+            width: 100%;
+        }
+    </style>
+</head>   
+<body>
+<div class="container">
+  
+    <img id="logo" src="assets/CHic Cashflows.jpg" alt="Chic Cashflows logo with elegant script text Chic Cashflows, surrounded by soft pastel colors and gentle curves, creating a friendly and welcoming financial atmosphere">
+  <nav id="main-nav">
+        <a id="nav-home" href="index.html">Home</a>
+        <a id="nav-topics" href="topics.html">Topics</a>
+        <a id="nav-savings" href="savings-tool.html">Savings Tool</a>
+        <a id="nav-budget" href="BudgetTool.html">Budget Tool</a>
+  </nav>
+<h1 id="topics-heading">Topics</h1> 
+  <p id="topics-intro" class="section">
+    Here you can find an archive of articles
+  </p>
+
+  <table class="section">
+    <tr>
+        <th>ID</th>
+        <th>Article</th>
+        <th>Topic/Topics</th>
+        <th>Date</th>
+        <th>Link</th>
+
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Emergency Funds</td>
+        <td>Emergency Planning,Budgeting,<br> Saving</td>
+        <td>2026-02-07</td>
+        <td><a href="emergency-funds.html">Read More</a></td>
+    </tr>
+     <tr>
+            <td>2</td>
+            <td>Credit Cards</td>
+            <td>Credit, Debt Management</td>
+            <td>2026-02-14</td>
+            <td><a href="credit-cards.html">Read More</a></td>
+     </tr>    
+
+  </table>
+</div>
 </body>
 </html>

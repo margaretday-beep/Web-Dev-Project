@@ -2,13 +2,12 @@ const form = document.getElementById("contact-form");
 
 if (form) {
     form.addEventListener("submit", function(event) {
-        event.preventDefault();
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
 
         if (!name || !email) {
+            event.preventDefault();
             alert("Please fill out both fields.");
-            return;
         }
 
         alert("Thank you for signing up, " + name + "! We will keep you updated at " + email + ".");
@@ -23,10 +22,8 @@ if (taxButton && taxInfo) {
     taxButton.addEventListener("click", function() {
         if (taxInfo.style.display === "none") {
             taxInfo.style.display = "block";
-            taxButton.textContent = "Hide tax resources";
         } else {
             taxInfo.style.display = "none";
-            taxButton.textContent = "Click here for tax resources!";
         }
     });
 }
@@ -47,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
             result.textContent = `You will reach your goal in ${months} month(s).`;
         } else {
             result.textContent = "Please enter valid numbers for both fields.";
+            result.classList.remove("show");
         }
     }
 
