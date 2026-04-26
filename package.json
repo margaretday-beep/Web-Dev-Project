@@ -1,0 +1,28 @@
+{
+  "name": "web-deveolopment-project",
+  "version": "1.0.0",
+  "description": "The site lives in the `docs/` directory.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/margaretday-beep/Web-Dev-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/margaretday-beep/Web-Dev-Project/issues"
+  },
+  "homepage": "https://github.com/margaretday-beep/Web-Dev-Project#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "sqlite3": "^6.0.1"
+  }
+}

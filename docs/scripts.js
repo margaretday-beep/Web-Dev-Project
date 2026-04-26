@@ -7,27 +7,51 @@ document.addEventListener("DOMContentLoaded", () => {
     const result = document.getElementById("calc-result");
     const formMessage = document.getElementById("form-message");
 
-    if (form) {
-        form.addEventListener("submit", (event) => {
-            event.preventDefault();
+     if (form) {
+      form.addEventListener("submit", async (event) => {
+          event.preventDefault();
 
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
 
-            if (!name || !email) {
-                if (formMessage) {
-                    formMessage.textContent = "Please fill out both fields.";
-                    formMessage.className = "status-message error-message";
-                }
-                return;
-            }
+          if (!name || !email) {
+              if (formMessage) {
+                  formMessage.textContent = "Please fill out both fields.";
+                  formMessage.className = "status-message error-message";
+              }
+              return;
+          }
 
-            if (formMessage) {
-                formMessage.textContent = "Thank you for signing up, " + name + "! We will keep you updated at " + email + ".";
-                formMessage.className = "status-message success-message";
-            }
-        });
-    }
+          try {
+              const response = await fetch("/contact", {
+                  method: "POST",
+                  headers: {
+                      "Content-Type": "application/json"
+                  },
+                  body: JSON.stringify({ name, email })
+              });
+
+              const data = await response.json();
+
+              if (!response.ok) {
+                  throw new Error(data.error || "Something went wrong.");
+              }
+
+              if (formMessage) {
+                  formMessage.textContent = data.message;
+                  formMessage.className = "status-message success-message";
+              }
+
+              form.reset();
+          } catch (error) {
+              if (formMessage) {
+                  formMessage.textContent = error.message;
+                  formMessage.className = "status-message error-message";
+              }
+          }
+      });
+  }
+
 
     if (taxButton && taxInfo) {
         taxButton.addEventListener("click", () => {
